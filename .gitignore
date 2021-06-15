@@ -1,10 +1,10 @@
 __pycache__
 
 example/1_topology1_CC/
-example/3_topology1_CC/
-example/4_topology1_CT/
-example/5_topology1_CC/
-example/6_topology1_CT/
+example/3_topology2_CC/
+example/4_topology2_CT/
+example/5_topology3_CC/
+example/6_topology3_CT/
 
 example/2_topology1_CT/plots.py
 example/2_topology1_CT/rough.py
