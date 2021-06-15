@@ -1,0 +1,48 @@
+appname: config_400ms_2c_64
+device: cuda:0
+datatype: const_time
+dataset:
+    zero_center: 0
+    keep_polarity: 1
+    resolution: 64
+show_feature_maps: 0 # create images of ofms (ANN)
+show_raster_plots: 0 # create images spike ofms + raster plots
+ann_to_snn:
+    fire_last_layer: 0
+    merge_BN: 0
+    compensate_for_mean: 0
+    compute_th: 0
+    percentile: 99.7
+    convert: 0
+    simulate: 1
+    simulation_params: 
+        tWindow: 100 # in ms (for poisson spikes)
+        input_type: aedat # poisson, aedat
+        num_frame_repeats: 1 # keep >= 1
+        extra_time: 0
+        interleave: 0
+        combine_frames: 0
+        combine_factor: 2
+        delayed_spikes: 1 # T/F
+        delayed_gated: 1 # T/F
+        gate_time: 50 # 
+        num_delayed_layers: 1
+        record_spikes: 0
+        record_poisson_spikes: 0
+        save_activation: 0
+        measure_sparsity: 0
+        measure_ops: 0
+        optimize_mem: 1 # 0,1,2 fast--->slow
+training:
+    eval: 0
+    get_stats:
+        measure_act_sparsity: 0 # writes to dir out_dir/xlsx
+    learn: 1
+    resume: 0
+    batch_size: 64
+    num_epochs: 5
+    lr: 0.001 # 0.0001 # 0.0001 # 0.0005 # 0.001
+    data_path: 
+        in:    /i3c/hpcl/sms821/Research/SpikSim/slayer_scratch/slayerPytorch/example/12_datasets/2x64x64/constTime_400ms_all
+        train: /i3c/hpcl/sms821/Research/SpikSim/slayer_scratch/slayerPytorch/example/12_datasets/2x64x64/constTime_400ms_all/train.txt
+        test:  /i3c/hpcl/sms821/Research/SpikSim/slayer_scratch/slayerPytorch/example/12_datasets/2x64x64/constTime_400ms_all/test.txt

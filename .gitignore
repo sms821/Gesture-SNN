@@ -1,0 +1,14 @@
+__pycache__
+
+./example/1_topology1_CC
+./example/3_topology1_CC
+./example/4_topology1_CT
+./example/5_topology1_CC
+./example/6_topology1_CT
+
+./example/2_topology1_CT/plots.py
+./example/2_topology1_CT/rough.py
+./example/2_topology1_CT/config_100ms_2c_64.yaml
+./example/2_topology1_CT/config_200ms_2c_64.yaml
+./example/2_topology1_CT/config_400ms_2c_64.yaml
+./example/2_topology1_CT/config_600ms_2c_64.yaml
